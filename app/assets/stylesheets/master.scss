@@ -5,6 +5,7 @@
   padding: 1.5% 12% 0 12%;
   height: 60px;
   text-align: left;
+  background-color: white;
 }
 
 .navbar-nav {
@@ -37,6 +38,7 @@
   -o-background-size: cover;
   background-size: cover;
   height: 400px;
+  width: auto;
   box-shadow: rgba(0, 0, 0, 0.95) 0px 3px 8px ;
 }
 
@@ -76,4 +78,37 @@ h1, h2, h3, h4, h5, h6, .navbar {
   text-decoration: none;
   color: white;
   background-color: #009973;
+}
+
+
+.feature-1 {
+  width: 32%;
+  padding-top: 1.5%;
+  padding-right: 5%;
+  padding-left: 5%;
+  background-color: #00cc99;
+  color: white;
+}
+
+.feature-2 {
+  width: 32%;
+  padding-top: 1.5%;
+  padding-right: 5%;
+  padding-left: 5%;
+  background-color: #00cc99;
+  color: white;
+}
+
+.feature-3 {
+  width: 32%;
+  padding-top: 1.5%;
+  padding-right: 5%;
+  padding-left: 5%;
+  background-color: #00cc99;
+  color: white;
+}
+
+body {
+  background: image_url('topography.png');
+  font-family: 'Montserrat,' sans-serif;
 }
