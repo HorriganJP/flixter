@@ -5,7 +5,23 @@
   padding: 1.5% 12% 0 12%;
   height: 60px;
   text-align: left;
-  margin-bottom: 140px;
+}
+
+.navbar-nav {
+  background-color: white;
+  color: white;
+  text-indent: 20px;
+  text-align: left;
+  font-size: 16px;
+  border: none;
+  position: relative;
+  display: inline-block;
+  max-width: 250px;
+}
+
+.navbar-nav a:hover {
+  background-color: #ff0000;
+  color: white;
 }
 
 .navbar-inverse a.navbar-brand {
@@ -14,6 +30,50 @@
   color: white;
 }
 
-.navbar navbar-toggleable-md navbar-light bg-faded {
+.hero {
+  background: image_url('hero-2.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.95) 0px 3px 8px ;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar {
+  margin: 0;
+}
+
+.frosty {
+  padding-top: 40px;
   color: white;
+}
+
+.frosty h1 {
+  font-family: 'Montserrat,' sans-serif;
+  font-weight: bold;
+  text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
+}
+
+.frosty h2 {
+  font-family: 'Montserrat,' sans-serif;
+  font-weight: 200;
+  text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
+}
+
+.btn-learn-more {
+  background-color: #00cc99;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 16px;
+  border: none;
+  color: white;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.btn-learn-more:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #009973;
 }
