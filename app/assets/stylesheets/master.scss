@@ -1,0 +1,19 @@
+.navbar {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+  color: white;
+  padding: 1.5% 12% 0 12%;
+  height: 60px;
+  text-align: left;
+  margin-bottom: 140px;
+}
+
+.navbar-inverse a.navbar-brand {
+  font-family: 'Montserrat,' sans-serif;
+  font-weight: italic;
+  color: white;
+}
+
+.navbar navbar-toggleable-md navbar-light bg-faded {
+  color: white;
+}
