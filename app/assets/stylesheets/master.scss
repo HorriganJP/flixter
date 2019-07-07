@@ -2,10 +2,14 @@
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
   color: white;
-  padding: 1.5% 12% 0 12%;
+  padding: 2% 12% 0% 12%;
   height: 60px;
   text-align: left;
   background-color: white;
+}
+
+.navbar-toggler {
+  left: 20px;
 }
 
 .navbar-nav {
@@ -21,7 +25,7 @@
 }
 
 .navbar-nav a:hover {
-  background-color: #ff0000;
+  background-color: #00cc99;
   color: white;
 }
 
@@ -31,6 +35,15 @@
   color: white;
 }
 
+.navbar-toggler {
+  margin-left: 20px;
+}
+
+.navbar-collapse {
+  margin-left: 20px;
+}
+
+
 .hero {
   background: image_url('hero-2.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -38,7 +51,7 @@
   -o-background-size: cover;
   background-size: cover;
   height: 400px;
-  width: auto;
+  width: 100%;
   box-shadow: rgba(0, 0, 0, 0.95) 0px 3px 8px ;
 }
 
@@ -80,13 +93,17 @@ h1, h2, h3, h4, h5, h6, .navbar {
   background-color: #009973;
 }
 
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+  background-image: linear-gradient(to bottom right, #01ffc0, #005b44)
+}
 
 .feature-1 {
   width: 32%;
   padding-top: 1.5%;
   padding-right: 5%;
   padding-left: 5%;
-  background-color: #00cc99;
   color: white;
 }
 
@@ -95,7 +112,6 @@ h1, h2, h3, h4, h5, h6, .navbar {
   padding-top: 1.5%;
   padding-right: 5%;
   padding-left: 5%;
-  background-color: #00cc99;
   color: white;
 }
 
@@ -104,11 +120,9 @@ h1, h2, h3, h4, h5, h6, .navbar {
   padding-top: 1.5%;
   padding-right: 5%;
   padding-left: 5%;
-  background-color: #00cc99;
   color: white;
 }
 
 body {
   background: image_url('topography.png');
-  font-family: 'Montserrat,' sans-serif;
 }
