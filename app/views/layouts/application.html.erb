@@ -17,9 +17,10 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">F L I X T E R</a>
+      <%= link_to 'F L I X T E R', root_path, class: 'navbar-brand' %>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
+        <% if user_signed_in? %>
           <li class="nav-item active">
             <a class="nav-link" href="#">H O M E<span class="sr-only">(current)</span></a>
           </li>
@@ -29,9 +30,31 @@
           <li class="nav-item">
             <a class="nav-link" href="#">H O R R I G A N</a>
           </li>
+          <li class="nav-item">
+            <%= link_to 'S I G N   O U T', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+          </li>
+
+        <% else %>
+
+          <li class="nav-item">
+            <%= link_to 'SIGN IN', new_user_session_path, class: 'nav-link' %>
+          </li>
+
+          <li class="nav-item">
+            <%= link_to 'SIGN UP', new_user_registration_path, class: 'nav-link' %>
+          </li>
+        <% end %>
         </ul>
       </div>
     </nav>
+
+    <% if notice.present? %>
+      <p class="alert alert-info"><%= notice %></p>
+    <% end %>
+
+    <% if alert.present? %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
 
     <%= yield %>
 

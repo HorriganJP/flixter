@@ -79,6 +79,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
 .btn-learn-more {
   background-color: #00cc99;
   text-decoration: none;
+  text-align: center;
   border-radius: 8px;
   padding: 12px 28px;
   font-size: 16px;
@@ -125,4 +126,33 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 body {
   background: image_url('topography.png');
+}
+
+.booyah-box {
+-moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+-webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+box-shadow: 1px 1px 2px 0 #d0d0d0;
+background: #fff;
+border: 1px solid #ccc;
+border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+}
+
+.sign-up-header {
+  font-family: 'Montserrat,' sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px 0px 0px 0px;
+}
+
+
+.btn-sign-up {
+  background-color: #00cc99;
+  text-decoration: none;
+  text-align: center;
+  padding: 12px 28px 12px 28px;
+  font-size: 16px;
+  border: none;
+  color: white;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-bottom: 28px; 
 }
