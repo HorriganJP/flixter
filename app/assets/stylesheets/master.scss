@@ -95,8 +95,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
 }
 
 .row {
-  margin-right: 0px;
-  margin-left: 0px;
+  margin: 0px 0px 0px 0px;
   background-image: linear-gradient(to bottom right, #01ffc0, #005b44)
 }
 
@@ -126,6 +125,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 body {
   background: image_url('topography.png');
+  margin: 0px 0px 0px 0px;
 }
 
 .booyah-box {
@@ -155,4 +155,15 @@ border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   color: white;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   margin-bottom: 28px; 
+}
+
+.footer {
+  position: absolute;
+  left: 0 ; right: 0 ; bottom: 0;
+  height:[footer-height];
+  text-align: center;
+  background-color: white;
+  padding: 14px 0px 14px 0px;
+  font-family: 'Montserrat,' sans-serif;
+
 }
