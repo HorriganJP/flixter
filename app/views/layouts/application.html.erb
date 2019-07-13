@@ -22,10 +22,10 @@
         <ul class="navbar-nav">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <a class="nav-link" href="#">H O M E<span class="sr-only">(current)</span></a>
+            <%= link_to 'HOME', root_path, class: 'nav-link' %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">C O D E</a>
+            <%= link_to 'SEE ALL COURSES', courses_path, class: 'nav-link' %>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">H O R R I G A N</a>
