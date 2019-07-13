@@ -12,7 +12,7 @@
 
     <% if current_user && current_user == @course.user %>
     <div class="col-sm-6 col-12 text-center">
-      <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
+      <%= link_to 'Manage Content', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
       <br/>
       <br/>
     </div>
