@@ -1,6 +1,11 @@
 class Instructor::SectionsController < ApplicationController
+  before_action :authenticate_user!
+
   def new
     @course = Course.find(params[:course_id])
+    if @course.user != current_user
+      return render plain: 'Unauthorized', status: :Unauthorized
+    end
     @section = Section.new
   end
 

@@ -6,6 +6,7 @@
   height: 60px;
   text-align: left;
   background-color: white;
+  z-index: 5;
 }
 
 .navbar-toggler {
@@ -27,6 +28,7 @@
 .navbar-nav a:hover {
   background-color: #00cc99;
   color: white;
+  z-index: 5;
 }
 
 .navbar-inverse a.navbar-brand {
@@ -182,3 +184,4 @@ border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
 .row {
   margin: 0px 0px 0px 0px;
 }
+
