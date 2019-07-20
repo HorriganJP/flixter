@@ -27,5 +27,4 @@
 /config/master.key
 
 #ignore application.yml w/ AWS Keys
-/config/
-application.yml
+/config/application.yml
