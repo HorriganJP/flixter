@@ -11,6 +11,9 @@ class Instructor::SectionsController < ApplicationController
     redirect_to instructor_course_path(current_course)
   end
 
+  def show
+  end
+
   private
 
 
