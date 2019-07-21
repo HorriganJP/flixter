@@ -74,10 +74,10 @@ gem 'simple_form'
 
 gem 'devise'
 
-gem 'carrierwave'
-
 gem 'figaro'
 
-gem 'fog-aws'
+gem 'carrierwave'
 
 gem 'mini_magick'
+
+gem 'carrierwave-aws'
