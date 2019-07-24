@@ -16,7 +16,7 @@ class LessonsController < ApplicationController
   def require_authorized_for_current_lesson
     if current_lesson.section.course != current_user.enrolled_in?
       redirect_to course_path(current_course)
-      flash[:alert] = "You Must Be Logged in"
+      flash[:alert] = "You Must Be Enrolled First"
     end
   end
 
