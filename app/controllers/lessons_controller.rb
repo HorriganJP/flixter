@@ -1,6 +1,6 @@
 class LessonsController < ApplicationController
   before_action :authenticate_user!
-  before_action :require_authorized_for_current_lesson
+  before_action :require_authorized_for_current_course
 
   def show
   end
@@ -12,15 +12,15 @@ class LessonsController < ApplicationController
     @current_lesson ||= Lesson.find(params[:id])
   end
 
- helper_method :current_course
-  def current_course
-    @current_lesson.section.course
+ def require_authorized_for_current_course
+    unless current_user.enrolled_in?(current_course)
+      render plain: "Unauthorized", status: :Unauthorized
+    end
   end
 
-  def require_authorized_for_current_lesson
-    if current_lesson.section.course != current_user.enrolled_in?(current_course)
-      return render plain: 'Unauthorized', status: :Unauthorized
-    end
+  helper_method :current_course
+  def current_course
+    current_lesson.section.course
   end
 
 end

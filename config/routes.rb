@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :courses, only: [:index, :show] do
     resources :enrollments, only: :create
   end
-  resources :lessons, only: [:show]
+  resources :lessons, only: [:show] #needs helper: current_course
   namespace :instructor do
     resources :sections, only: [] do
       resources :lessons, only: [:new, :create]
