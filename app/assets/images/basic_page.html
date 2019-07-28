@@ -1,0 +1,36 @@
+
+<!-- saved from url=(0088)file:///C:/Users/JP's%20Tablet/Desktop/coding-environment/src/playground/basic_page.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  </head>
+
+  <body>
+    <script src="./basic_page_files/jquery.min.js.download"></script>
+
+    <script>
+      $(function() { 
+        var h2Element = $('h2');
+        
+        h2Element.click(function() {
+          $.get( "http://www.catfact.info/api/v1/facts.json?page=16&per_page=5", function( data ) {
+            var detail = data.facts[0].details;
+            h2Element.html(detail);
+          });
+
+        });
+      });
+
+    </script>
+    <h1 class="headline">Hello</h1>
+    <h2 class="headline">Goodbye :(</h2>
+    <hr>
+    <input id="detail">
+  
+
+
+
+
+
+
+
+
+</body></html>
