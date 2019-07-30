@@ -70,6 +70,7 @@ end
 
 gem 'jquery-rails'
 
+#Needed for JavaScript and Jquery integration
 gem 'jquery-ui-rails'
 
 gem 'simple_form'
@@ -84,6 +85,10 @@ gem 'mini_magick'
 
 gem 'carrierwave-aws'
 
+#Stripe allows for credit card transactions
 gem 'stripe'
 
+#allows for ranking of sections, lessons, etc.
 gem 'ranked-model'
+
+gem 'font-awesome-rails'
