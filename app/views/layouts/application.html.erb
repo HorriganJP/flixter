@@ -30,7 +30,7 @@
             <%= link_to 'SEE ALL COURSES', courses_path, class: 'nav-link' %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">HORRIGAN</a>
+            <%= link_to current_user.email.upcase, dashboard_path, class: 'nav-link' %>
           </li>
           <li class="nav-item">
             <%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete, class: 'nav-link' %>
@@ -65,9 +65,9 @@
   <div class="footer" id="footer">
 
     <div class="container">
-      <b>Teachers</b>
+      <b>T E A C H E R S</b>
       <br>
-      <%= link_to 'Teach a Course', new_instructor_course_path %>
+      <%= link_to 'TEACH A COURSE', new_instructor_course_path %>
     </div>
   </div>
 

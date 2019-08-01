@@ -2,33 +2,34 @@
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
   color: white;
-  padding: 2% 12% 0% 12%;
+  padding: 0% 1% 0% 1%;
   height: 60px;
   text-align: left;
   background-color: white;
-  z-index: 5;
+  z-index: 10;
 }
 
 .navbar-toggler {
-  left: 20px;
+  left: 15px;
 }
 
 .navbar-nav {
   background-color: white;
   color: white;
-  text-indent: 20px;
+  padding: 0% 1% 0% 1%;
   text-align: left;
-  font-size: 16px;
+  font-size: 14px;
   border: none;
   position: relative;
   display: inline-block;
-  max-width: 250px;
+  max-width: 500px;
 }
 
 .navbar-nav a:hover {
   background-color: #00cc99;
   color: white;
-  z-index: 5;
+  text-align: left;
+  position: relative;
 }
 
 .navbar-inverse a.navbar-brand {
@@ -265,4 +266,10 @@ ul .header .fa {
 
 .lesson li p {
   margin: 0;
+}
+
+
+.container-fluid{
+  padding-right: 0px;
+  padding-left: 0px;
 }
