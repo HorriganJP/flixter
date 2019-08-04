@@ -1,9 +1,28 @@
 <br/>
 <div class="booyah-box col-10 offset-1">
   <h1><%= current_lesson.title %></h1>
-  <p>
+  <p class="float-left">
     <%= current_lesson.subtitle %>
   </p>
+
+  <% if current_lesson.next_lesson.present? %>
+    <%= link_to lesson_path(current_lesson.next_lesson), class: "btn btn-default float-right" do %>
+    Next Lesson
+    <span class="fa fa-forward"></span>
+    <% end %>
+  <% end %>
+
+  <% if current_lesson.previous_lesson.present? %>
+    <%= link_to lesson_path(current_lesson.previous_lesson), class: "btn btn-defualt float-right" do %>
+    Previous Lesson
+    <span class="fa fa-backward"></span>
+    <% end %>
+  <% end %>
+
+  
+
+  <br class="clr" />
+  <br />
 
   
 
