@@ -1,39 +1,50 @@
 <br />
+<div class="booyah-box col-10 offset-1 text-center">
+  <h1>E N R O L L E D</h1>
+</div>
+<br/>
 
-<div class="booyah-box col-10 offset-1">
-  <h1>What I'm Learning</h1>
-  <br/>
+<div class="row-enrolled col-10 offset-1 text-center">
   <% current_user.enrolled_courses.each do |course| %>
-    
-    <h3 class="text-center">
-      <%= link_to course.title, course_path(course) %>  
-    </h3>
-    <br/>
+  
+    <div class="booyah-box-enrolled col-4 text-center">
+      <br/>
+        <h3 class="dashboard-course-learn">
+          <%= link_to course.title.upcase, course_path(course) %>  
+        </h3>
+        <br/>
 
-    <% if course.image.present? %>
-      <%= image_tag course.image, class: 'img-fluid' %>
-    <% end %>
-    <div class="row">
-      <div class="col-12 col-sm-8">
-        <%= course.description %>
-      </div>
-      <div class="col-12 col-sm-4 text-center">
-        <%= link_to "MORE INFO", course_path(course), class: 'btn btn-md btn-primary' %>
-      </div>
+        <% if course.image.present? %>
+          <%= image_tag course.image, class: 'img-fluid' %>
+        <% end %>
+       
+          <div>
+            <%= course.description %>
+          </div>
+          <br/>
+
+          <div>
+            <%= link_to "MORE INFO", course_path(course), class: 'btn btn-md btn-primary' %>
+          </div>      
+      <br/>
     </div>
   <% end %>
-  <br/>
 </div>
 
-<hr class="col-8 offset-2">
+
+<br/>
+<br/>
+
+<div class="booyah-box col-10 offset-1 text-center">
+  <h1>T E A C H I N G</h1>
+</div>
+<br/>
 
 <div class="booyah-box col-10 offset-1">
-  <h1>What I'm Teaching</h1>
-  <br/>
   <% current_user.courses.each do |course| %>
 
-    <h3 class="text-center">
-      <%= link_to course.title, instructor_course_path(course) %>
+    <h3 class="dashboard-course-teach">
+      <%= link_to course.title.upcase, instructor_course_path(course) %>
     </h3>
     <br/>
 
@@ -42,13 +53,14 @@
       <br/>
     <% end %>
     <div class="row">
-      <div class="col-12 col-sm-8">
+      <div class="col-12 col-sm-9">
         <%= course.description %>
       </div>
-      <div class="col-12 col-sm-4 text-center">
+      <div class="col-12 col-sm-3 text-center">
         <%= link_to "MORE INFO", instructor_course_path(course), class: 'btn btn-md btn-primary' %>
       </div>
     </div>
-    <br/>
+    <hr class="course-seperate">
   <% end %>
+  <br/>
 </div>

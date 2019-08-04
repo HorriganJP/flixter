@@ -13,65 +13,86 @@
   </head>
 
   <body>
-    
+    <main role="main" class="flex-shrink-0">
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <%= link_to 'F L I X T E R', root_path, class: 'navbar-brand' %>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+          <% if user_signed_in? %>
+            <li class="nav-item active">
+              <%= link_to 'HOME', root_path, class: 'nav-link' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'SEE ALL COURSES', courses_path, class: 'nav-link' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to current_user.email.upcase, dashboard_path, class: 'nav-link' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+            </li>
 
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <%= link_to 'F L I X T E R', root_path, class: 'navbar-brand' %>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-        <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to 'HOME', root_path, class: 'nav-link' %>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'SEE ALL COURSES', courses_path, class: 'nav-link' %>
-          </li>
-          <li class="nav-item">
-            <%= link_to current_user.email.upcase, dashboard_path, class: 'nav-link' %>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete, class: 'nav-link' %>
-          </li>
+          <% else %>
 
-        <% else %>
+            <li class="nav-item">
+              <%= link_to 'SIGN IN', new_user_session_path, class: 'nav-link' %>
+            </li>
 
-          <li class="nav-item">
-            <%= link_to 'SIGN IN', new_user_session_path, class: 'nav-link' %>
-          </li>
+            <li class="nav-item">
+              <%= link_to 'SIGN UP', new_user_registration_path, class: 'nav-link' %>
+            </li>
+          <% end %>
+          </ul>
+        </div>
+      </nav>
 
-          <li class="nav-item">
-            <%= link_to 'SIGN UP', new_user_registration_path, class: 'nav-link' %>
-          </li>
-        <% end %>
-        </ul>
+      <% if notice.present? %>
+        <p class="alert alert-info"><%= notice %></p>
+      <% end %>
+
+      <% if alert.present? %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+
+      <%= yield %>
+
+      <div class="push"></div>
+    </main>
+    <div class="footer" id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-4">
+            <b>T E A C H E R S</b>
+            <br/>
+            <%= link_to 'TEACH A COURSE', new_instructor_course_path %>
+            <br/>
+            <%= link_to "MY DASHBOARD", dashboard_path %>
+          </div>
+          <div class="col-12 col-sm-4">
+            <b>A B O U T</b>
+            <br/>
+            <%= link_to 'TEAM', '#' %>
+            <br/>
+            <%= link_to 'CAREERS', '#' %>
+            <br/>
+            <%= link_to 'PRIVACY POLICY', '#' %>
+          </div>
+          <div class="col-12 col-sm-4 social">
+            <b>S O C I A L</b>
+            <br/>
+            <%= link_to 'https://github.com/HorriganJP' do %>
+              <span class="fa fa-github-square fa-2x social-button"></span>
+            <% end %>
+            <span class="fa fa-facebook-square fa-2x social-button"></span> 
+            <span class="fa fa-twitter-square fa-2x social-button"></span>       
+          </div>
+        </div>
       </div>
-    </nav>
-
-    <% if notice.present? %>
-      <p class="alert alert-info"><%= notice %></p>
-    <% end %>
-
-    <% if alert.present? %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
-
-    <%= yield %>
-
-    <div class="push"></div>
-
-  <div class="footer" id="footer">
-
-    <div class="container">
-      <b>T E A C H E R S</b>
-      <br>
-      <%= link_to 'TEACH A COURSE', new_instructor_course_path %>
     </div>
-  </div>
-
-  <script src="http://vjs.zencdn.net/5.12.6/video.js"></script>
-  <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <script src="http://vjs.zencdn.net/5.12.6/video.js"></script>
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
   </body>
 </html>

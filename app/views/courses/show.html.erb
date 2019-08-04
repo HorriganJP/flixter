@@ -5,7 +5,7 @@
 
 
 <div class="booyah-box col-10 offset-1">
-  <h1 class="text-center"><%= @course.title %></h1>
+  <h1 class="course-title"><%= @course.title %></h1>
   <% if @course.image.present? %>
     <%= image_tag @course.image.url, class: 'img-fluid' %>
   <% end %>
@@ -30,7 +30,7 @@
           <h3 class="badge badge-info">You Are Enrolled!</h3>
         <% else %>
           <% if @course.free? %>
-            <%= link_to 'Enroll', course_enrollments_path(@course), class: 'btn btn-primary', method: :post %>
+            <%= link_to 'Enroll', course_enrollments_path(@course), class: 'btn btn-primary btn-large', method: :post %>
           <% else %>
             <%= form_tag course_enrollments_path(@course) do %>
               <br />
@@ -51,7 +51,6 @@
 
     <div class="col-sm-6 col-12 text-center">
       <%= @course.description %>
-      <p><%= current_user.id %></p>
       <br/>    
       <br/>
     </div>
